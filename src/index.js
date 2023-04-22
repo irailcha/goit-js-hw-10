@@ -49,7 +49,7 @@ function loadCountries(countries) {
 <img src="${svg}" alt="${country.name}" style="width: 30px; height: 20px" />
           <h2 class="country-name">${country.name}</h2>
         </div>
-        <div class="country-info">
+        <div class="country-info"> 
           
           <p><span class="label">Population:</span> ${country.population}</p>
           <p><span class="label">Capital:</span> ${country.capital}</p>
