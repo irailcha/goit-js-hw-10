@@ -33,10 +33,11 @@ function loadCountries(countries) {
     countryList.innerHTML = countries.map(country => {
       const { flags: { svg } } = country;
 
+
       return `<li class="country">
       <div class="country-img" style="display: flex;align-items: center;gap: 15px;">
-          <img src="${svg}" alt="${country.name}" style="width: 30px; height: 20px" />
-          <h2 class="country-name">${country.name}</h2>
+      <img src="${svg}" alt="${country.name}" style="width: 30px; height: 20px" />
+      <h2 class="country-name">${country.name}</h2>
         </div>
       </li>`;
     }).join("");
@@ -46,23 +47,25 @@ function loadCountries(countries) {
 
       return `<li class="country">
       <div class="country-img" style="display: flex;align-items: center;gap: 15px;">
-<img src="${svg}" alt="${country.name}" style="width: 30px; height: 20px" />
-          <h2 class="country-name">${country.name}</h2>
-        </div>
+      <img src="${svg}" alt="${country.name}" style="width: 30px; height: 20px" />
+      <h2 class="country-name">${country.name}</h2>
+        </div></li>
         <div class="country-info"> 
           
           <p><span class="label">Population:</span> ${country.population}</p>
           <p><span class="label">Capital:</span> ${country.capital}</p>
           <p><span class="label">Languages:</span> ${country.languages.map(lang => lang.name).join(', ')}</p>
         </div>
-      </li>
+      
     `}).join('');
+
   } else if (countries.length === 0) {
     Notiflix.Notify.warning("Oops, there is no country with that name");
   } else {
     Notiflix.Notify.warning("Too many matches found. Please enter a more specific name.");
   }
 }
+
 
 
 
