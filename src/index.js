@@ -58,11 +58,12 @@ function loadCountries(countries) {
       countryInfo.innerHTML = countryInfoHtml;
       
   }
-   else if (countries[0].name.length >=1 && countries.length >= 10) {
-    Notiflix.Notify.warning("Too many matches found. Please enter a more specific name.");
+   else if (countries.length === 0) {
+    Notiflix.Notify.warning("Oops, there is no country with that name");
+    
     
   } else {
-    Notiflix.Notify.warning("Oops, there is no country with that name");
+    Notiflix.Notify.warning("Too many matches found. Please enter a more specific name.");
   }
 }
 
